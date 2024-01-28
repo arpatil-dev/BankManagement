@@ -9,7 +9,6 @@ public class DatabaseInfo {
     public Connection connect() {
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            System.out.println("Connected to the MySQL database");
             return connection;
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
@@ -21,7 +20,6 @@ public class DatabaseInfo {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
-                System.out.println("Connection closed");
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
