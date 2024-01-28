@@ -15,6 +15,7 @@ public class BankMGT {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new Auth().start();
     }
     
 }
